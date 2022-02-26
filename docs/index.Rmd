@@ -1,0 +1,78 @@
+---
+title: "Report - U.S. Incarceration Trends"
+author: "Jinsu Ha"
+date: "2/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../source/analysis.R")
+```
+
+# Introduction and Summary Information
+Today, I want to focus on what has been happening in the U.S.'s incarceration system and how this system has been discriminating against certain races - people of color - to oppress and silent their voices and actions. Incarceration is a means to punish people by placing them in prison and jail. The following data set is collected by the Vera Institute to examine the county-level populations over the years and to observe the incarcerated populations and total populations divided up by race, gender, locations, age, and more.
+
+I began the analysis by examining **the total population rate of people in the jail** in 
+average. I did so to understand how much of the total populations are incarcerated, 
+how the population spared in the jail is similar or different to the total population 
+spread around the U.S.
+
+Later on, I chose **the five states with the most population** to see the difference 
+between **the Black populations in the jail and the White populations in the jail.** 
+I did so to examine how the big states with diverse population are handling this 
+discrimination in the incarcerated system.
+
+Lastly, I examined how **the Latinx population in the jail** is like across the states. 
+I wanted to examine this data because I wanted to understand not only the discrimination
+against the Black population, but also the Latinx population.
+
+# Some Key values of Populations of different races in the jail
+I used the data to calculate some key numbers to understand the bigger pictures of how 
+certain racial groups are represented in the incarceration system. I began with the 
+average population rate in percent in the most recent year which was **0.29%**.
+
+- The population rate of White people in the total population is about **70.19%**; the population rate of White people in jail is about **55.38%**.
+
+- The population rate of Black people in the total population is about **10.93%**; the population rate of Black people in the jail is about **26.76%**.
+
+- The population rate of Latinx people in the total population is about **14.52%**; the population rate of Latinx people in the jail is about **14.04%**.
+
+- The population rate of AAPI people in the total population is about **3.02%**; the population rate of AAPI people in the jail is about **0.91%**.
+
+- The population rate of Native people in the total population is about **1.34%**; the population rate of Native people in the jail is about **2.4%**.
+
+From these numbers, we can see that the population of Black peopel in the jail is significantly higher than their representation in the U.S. total population and the population of White people in the jail is significantly lower than their representation in the U.S total population. Moreover, Latinx population in the jail is about the same as their population around the U.S.
+
+# Chart 1 - Time Trends
+***Description & Purpose:*** This charts shows the Population trend of Balck people in the jail over time in the 8 most populated counties in California. I picked California because it is one of the most diverse state in the U.S. with the most population overall. I wanted to examine this rate to see whether the rate of Black people in jail decreaed overtime. 
+
+```{r chart 1, echo = FALSE}
+plot(time_plot)
+```
+
+***Founding:*** As you see the graph above, you can see that in the most counties the rate of Black people in the jail has been very constant. However, we see there is a big spike in 2006 in Kern county. The number is **over 100%**, meaning that there were Black people incarcerated in the jail and the population was more than the total Black People population in that county. It is very sad to see.
+
+# Chart 2
+***Description and Purpose:*** Here, I wanted to compare the difference between the Jail population of White people and Black people in the **5 the most populated states** in the U.S. because I thought that bigger states would have a more diverse population and therefore will have a less discrimination against people of color. 
+```{r chart 2, echo = FALSE}
+plot(variable_chart)
+```
+
+***Founding:*** As you see the graph above, you can see that the population rate of Black and White people in jail are very different. Except New York, there are more white population in the jail than Black people. However, if we consider the population rate difference between White and Black people in each state, it is still true that there are **significantly** more Black people in the jail than White people considering the total population rate. 
+
+# Map
+***Description and Purpose:*** Here, I wanted to show the spread of the rate of Latinx in the jail across the U.S. Since I focused on Black people's rate in the above two graphs, I wanted to diversify my observation by looking at different race. Here, I have a map that shows how high the Latinx population in the jail in each state. The lighter the blue, the less the population rate!
+```{r map, echo = FALSE}
+plot(map_chart)
+```
+
+***Founding:*** As you can see in most states, the Latinx populatino in jail is fairly low, however, there are some states that are high in the population such as **Texas, California and Arizona.** It is concerning that the states **near Mexico** has a higher population of Latinx population in the jail. 
+
+
+
+
+
+
+
+
